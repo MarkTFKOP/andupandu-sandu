@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "dfe33eb6-6069-4a21-ab53-2bc88f553693",
+		"name": "AnduPandu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25622895"
+	},
+	"item": [
+		{
+			"name": "GET Task By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/tasks/get/:id",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"tasks",
+						"get",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{local}}/tasks/all"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"4\",\n  \"name\": \"TASK A\",\n  \"description\": \"TASK A must complete by tomm\",\n  \"status\": \"open\",\n  \"priority\": \"low\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local}}/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"4\",\n  \"name\": \"TASKadsaA\",\n  \"description\": \"TASK A must complete by tomm\",\n  \"status\": \"open\",\n  \"priority\": \"low\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local}}/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Task Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"4\",\n  \"name\": \"TASKadsaA\",\n  \"description\": \"TASK A must complete by tomm\",\n  \"status\": \"open\",\n  \"priority\": \"low\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local}}/tasks/"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:3000"
+		}
+	]
+}
